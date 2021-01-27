@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TA Interview</string>
+    <string name="title_articles">Articles</string>
+    <string name="title_leagues">Leagues</string>
+    <string name="leagues_placeholder">League UI Goes Here</string>
+    <string name="article_image_description">Article Header Image</string>
+</resources>

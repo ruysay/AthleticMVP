@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ath_royal">#497AB8</color>
+    <color name="ath_royal_75">#BF497AB8</color>
+    <color name="ath_royal_50">#80497AB8</color>
+    <color name="ath_royal_25">#40497AB8</color>
+    <color name="ath_royal_12">#1E497AB8</color>
+    <color name="ath_grey_8">#000000</color>
+    <color name="ath_grey_7">#121212</color>
+    <color name="ath_grey_6">#323232</color>
+    <color name="ath_grey_5">#5C5656</color>
+    <color name="ath_grey_4">#C4C4BC</color>
+    <color name="ath_grey_3">#F0F0EA</color>
+    <color name="ath_grey_2">#F7F7F4</color>
+    <color name="ath_grey_1">#FFFFFF</color>
+</resources>
