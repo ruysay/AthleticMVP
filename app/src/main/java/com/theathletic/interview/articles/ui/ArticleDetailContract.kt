@@ -1,12 +1,17 @@
 package com.theathletic.interview.articles.ui
 
+import com.theathletic.interview.mvp.Interactor
 import com.theathletic.interview.mvp.UiModel
 
-interface ArticlesContract {
+interface ArticleDetailContract {
+
+    interface View: Interactor {
+        fun showArticle(articleState: ViewState) {}
+    }
 
     data class ViewState(
         val showLoading: Boolean,
-        val articleModels: List<ArticleUiModel>
+        val articleModel: ArticleUiModel?
     ): com.theathletic.interview.mvp.ViewState
 
     class ArticleUiModel(
@@ -14,7 +19,8 @@ interface ArticlesContract {
         val title: String,
         val author: String? = null,
         val displayAuthor: Boolean = false,
-        val imageUrl: String?
+        val imageUrl: String?,
+        val body: String?
     ): UiModel {
         override val stableId = title
     }
@@ -22,4 +28,6 @@ interface ArticlesContract {
     sealed class Event: com.theathletic.interview.mvp.Event() {
         object ShowToastEvent: Event()
     }
+
+
 }

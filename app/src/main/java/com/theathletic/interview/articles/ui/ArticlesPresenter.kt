@@ -42,6 +42,7 @@ class ArticlesPresenter(
 
     private fun Article.toUiModel() =
         ArticlesContract.ArticleUiModel(
+            id = id,
             title = title,
             imageUrl = imageUrlString
         )

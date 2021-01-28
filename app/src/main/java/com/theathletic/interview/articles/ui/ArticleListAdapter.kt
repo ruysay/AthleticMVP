@@ -1,5 +1,8 @@
 package com.theathletic.interview.articles.ui
 
+
+import android.app.Activity
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,10 +10,11 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
-import coil.load
 import com.theathletic.interview.R
+import com.theathletic.interview.main.MainApplication
+import timber.log.Timber
 
-class ArticleListAdapter :
+class ArticleListAdapter() :
     RecyclerView.Adapter<ArticleListAdapter.ViewHolder>() {
 
     var articleModels: List<ArticlesContract.ArticleUiModel> = emptyList()
@@ -38,12 +42,21 @@ class ArticleListAdapter :
         articleModels.getOrNull(position)?.let { article ->
             with(viewHolder) {
                 titleView.text = article.title
-                imageView.load(article.imageUrl)
+//                imageView.load(article.imageUrl)
                 authorView.text = article.author.orEmpty()
                 authorView.visibility = if (article.displayAuthor) View.VISIBLE else View.GONE
 
+                // Use Picasso to load image with cache
+                MainApplication.picassoWithCache.load(article.imageUrl)?.fit()
+                    ?.placeholder(R.drawable.gray_background)?.into(imageView)
+
                 container.setOnClickListener {
 
+                    // start ArticleDetail Activity
+                    val intent = Intent(it.context, ArticleDetailActivity::class.java)
+                    intent.putExtra(ArticleDetailActivity::class.java.simpleName, article.id)
+                    it.context.startActivity(intent)
+                    (it.context as Activity).overridePendingTransition(R.anim.fade_out, R.anim.fade_in)
                 }
             }
         }

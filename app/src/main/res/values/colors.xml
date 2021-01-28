@@ -13,4 +13,7 @@
     <color name="ath_grey_3">#F0F0EA</color>
     <color name="ath_grey_2">#F7F7F4</color>
     <color name="ath_grey_1">#FFFFFF</color>
+
+    <color name="white">#FFF</color>
+    <color name="black">#000</color>
 </resources>

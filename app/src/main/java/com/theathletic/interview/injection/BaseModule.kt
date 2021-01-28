@@ -2,6 +2,7 @@ package com.theathletic.interview.injection
 
 import com.theathletic.interview.articles.data.ArticleRepository
 import com.theathletic.interview.articles.data.remote.ArticleApi
+import com.theathletic.interview.articles.ui.ArticleDetailPresenter
 import com.theathletic.interview.articles.ui.ArticlesPresenter
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
@@ -22,5 +23,6 @@ val baseModule = module {
     single { ArticleRepository(get()) }
 
     viewModel { ArticlesPresenter(get()) }
+    viewModel { ArticleDetailPresenter(get()) }
 
 }

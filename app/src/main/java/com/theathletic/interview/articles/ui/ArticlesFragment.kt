@@ -7,11 +7,13 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.DividerItemDecoration.VERTICAL
 import com.theathletic.interview.R
+import com.theathletic.interview.main.MainActivity
 import com.theathletic.interview.mvp.BaseFragment
 import kotlinx.android.synthetic.main.fragment_articles.article_list
 import kotlinx.android.synthetic.main.fragment_articles.progress_circular
 import kotlinx.coroutines.FlowPreview
 import org.koin.androidx.viewmodel.ext.android.getViewModel
+import timber.log.Timber
 
 class ArticlesFragment
     : BaseFragment<ArticlesPresenter, ArticlesContract.ViewState>() {
@@ -40,4 +42,14 @@ class ArticlesFragment
         article_list.adapter = listAdapter
         article_list.addItemDecoration(DividerItemDecoration(context, VERTICAL))
     }
+
+    /**
+     *
+     *
+     *     override fun onRecyclerViewItemClickListener(arg1: Any?, arg2: Any?, arg3: Any?) {
+     *     val articleId = arg1 as String
+     *     (activity as MainActivity).goToArticleDetailFragment()
+     *     }
+     */
+
 }

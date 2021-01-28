@@ -1,0 +1,45 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/ath_grey_7</item>
+        <item name="colorPrimaryDark">@color/ath_grey_8</item>
+        <item name="colorAccent">@color/ath_royal_75</item>
+    </style>
+
+    <!-- Fullscreen activity theme. -->
+    <style name="Fullscreen" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="TextSubtitle" parent="AppTheme">
+        <item name="android:textSize">@dimen/text_subtitle</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextAppearance.AppCompat.Widget.ActionBar.Title" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/text_title</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/d_din_bold</item>
+    </style>
+
+    <style name="TextDetailTitle">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_marginStart">@dimen/car_item_spacing</item>
+        <item name="android:layout_marginEnd">@dimen/car_item_spacing</item>
+        <item name="android:fontFamily">@font/d_din_bold</item>
+        <item name="android:textSize">@dimen/text_large</item>
+    </style>
+
+    <style name="TextDetailBody">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_marginStart">@dimen/car_item_spacing</item>
+        <item name="android:layout_marginEnd">@dimen/car_item_spacing</item>
+        <item name="android:fontFamily">@font/d_din</item>
+        <item name="android:textSize">@dimen/text_medium</item>
+    </style>
+
+</resources>

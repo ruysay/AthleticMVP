@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.theathletic.interview.R
+import com.theathletic.interview.articles.ui.ArticleDetailFragment
 import com.theathletic.interview.articles.ui.ArticlesFragment
 import com.theathletic.interview.leagues.ui.LeaguesFragment
 import kotlinx.android.synthetic.main.activity_main.nav_view
@@ -66,4 +67,13 @@ class MainActivity : AppCompatActivity() {
         LEAGUES(R.id.navigation_leagues, R.string.title_leagues)
     }
 
+    fun goToArticleDetailFragment() {
+//        supportActionBar?.title = getString(tabItem.menuTitle)
+        val fragment = ArticleDetailFragment()
+
+        val transaction = supportFragmentManager.beginTransaction()
+
+        transaction.replace(R.id.fragment_container, fragment)
+            .commit()
+    }
 }
