@@ -27,8 +27,6 @@ class ArticleDetailActivity: BaseActivity<ArticleDetailPresenter, ArticleDetailC
 
 
     override fun renderState(viewState: ArticleDetailContract.ViewState) {
-        Timber.d("checkArticle - ${viewState.articleModel?.imageUrl}")
-
         viewState.articleModel?.let { article ->
             detail_title.text = article.title
             detail_body.text = article.body

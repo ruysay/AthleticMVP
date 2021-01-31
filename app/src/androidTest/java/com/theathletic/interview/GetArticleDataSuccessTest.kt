@@ -5,7 +5,6 @@ import com.google.gson.Gson
 import com.theathletic.interview.articles.data.ArticleRepository
 import com.theathletic.interview.articles.data.remote.ArticleApi
 import com.theathletic.interview.articles.ui.*
-import com.theathletic.interview.mvp.BaseFragment
 import junit.framework.TestCase.assertEquals
 import kotlinx.coroutines.runBlocking
 import okhttp3.mockwebserver.MockResponse
@@ -16,7 +15,6 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import junit.framework.TestCase.assertNotNull
-import org.koin.androidx.viewmodel.ext.android.getViewModel
 import org.mockito.MockitoAnnotations
 import org.mockito.junit.MockitoJUnitRunner
 import retrofit2.Retrofit
@@ -77,7 +75,6 @@ class GetArticleDataSuccessTest {
             }
 
             articlesPresenter?.state?.let {
-                Timber.d("checkArticle: $it")
                 assertNotNull(it)
                 assertNotNull(it.articles)
                 assertEquals(it.articles.size, mockResult.size)
@@ -89,11 +86,4 @@ class GetArticleDataSuccessTest {
     fun teardown() {
         mockWebServer.shutdown()
     }
-//
-//    override fun setupPresenter() = getViewModel<ArticlesPresenter>()
-//
-//
-//    override fun renderState(viewState: ArticlesContract.ViewState) {
-//        Timber.d("checkArticle - renderState: $viewState")
-//    }
 }
