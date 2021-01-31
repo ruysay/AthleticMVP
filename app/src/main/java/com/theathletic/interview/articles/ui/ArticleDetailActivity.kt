@@ -20,7 +20,7 @@ class ArticleDetailActivity: BaseActivity<ArticleDetailPresenter, ArticleDetailC
         setupPresenter()
 
         val articleId = intent.getStringExtra(ArticleDetailActivity::class.java.simpleName)!!
-        (presenter as ArticleDetailPresenter).getArticleById(articleId)
+        presenter.getArticleById(articleId)
     }
 
     override fun setupPresenter() = getViewModel<ArticleDetailPresenter>()

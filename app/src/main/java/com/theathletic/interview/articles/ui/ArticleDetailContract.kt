@@ -1,13 +1,8 @@
 package com.theathletic.interview.articles.ui
 
-import com.theathletic.interview.mvp.Interactor
 import com.theathletic.interview.mvp.UiModel
 
 interface ArticleDetailContract {
-
-    interface View: Interactor {
-        fun showArticle(articleState: ViewState) {}
-    }
 
     data class ViewState(
         val showLoading: Boolean,
