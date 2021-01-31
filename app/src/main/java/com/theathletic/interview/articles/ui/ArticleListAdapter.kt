@@ -12,7 +12,6 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.theathletic.interview.R
 import com.theathletic.interview.main.MainApplication
-import timber.log.Timber
 
 class ArticleListAdapter() :
     RecyclerView.Adapter<ArticleListAdapter.ViewHolder>() {
@@ -42,7 +41,6 @@ class ArticleListAdapter() :
         articleModels.getOrNull(position)?.let { article ->
             with(viewHolder) {
                 titleView.text = article.title
-//                imageView.load(article.imageUrl)
                 authorView.text = article.author.orEmpty()
                 authorView.visibility = if (article.displayAuthor) View.VISIBLE else View.GONE
 

@@ -8,7 +8,7 @@ import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
 /**
- * This class can be extended by Fragments to leverage the MVP framework. By doing so,
+ * This class can be extended by Activities to leverage the MVP framework. By doing so,
  * there are several things provided:
  * - strong typing and initiation of a Presenter implementation that observes the fragment lifecycle
  * - collection of Presenter ViewState updates so the Fragment can re-render when necessary

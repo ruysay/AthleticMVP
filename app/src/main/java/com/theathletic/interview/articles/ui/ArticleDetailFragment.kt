@@ -18,7 +18,7 @@ class ArticleDetailFragment
     override fun setupPresenter() = getViewModel<ArticleDetailPresenter>()
 
     override fun renderState(viewState: ArticleDetailContract.ViewState) {
-        Timber.d("checkArticle renderState: ${viewState.articleModel}")
+        Timber.d("renderState: ${viewState.articleModel}")
     }
 
     override fun onCreateView(

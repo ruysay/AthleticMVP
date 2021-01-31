@@ -19,7 +19,7 @@ class ArticleDetailPresenter (
     }
 
     init {
-        Timber.i("checkArticle creating new article detail presenter")
+        Timber.i("creating new article detail presenter")
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
